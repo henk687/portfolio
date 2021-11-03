@@ -56,10 +56,10 @@ function enableScroll() {
 Popup custom logic
 #########################################################################
  */
-var modalElement = $(document).find('.js-team-modal'),
-  modalContentTop = modalElement.find('.js-team-modal-content-top'),
-  modalContentBottom = modalElement.find('.js-team-modal-content-bottom'),
-  modalContentImage = modalElement.find('.js-team-modal-image'),
+var modalElement = $(document).find('.js-cmssite-modal'),
+  modalContentTop = modalElement.find('.js-cmssite-modal-content-top'),
+  modalContentBottom = modalElement.find('.js-cmssite-modal-content-bottom'),
+  modalContentImage = modalElement.find('.js-cmssite-modal-image'),
   modalContentImageSpacer,
   currentCard,
   popupBgElement,
@@ -113,7 +113,7 @@ var personModal = {
       modalContentImage.html(currentCard.find('.js-modal-image').html());
 
       // Add and animate bg element
-      popupBgElement = $("<div class='team-modal-background-floating-block'></div>");
+      popupBgElement = $("<div class='cmssite-modal-background-floating-block'></div>");
       popupBgElement.css({
         ...cardSizeAndPosition,
         visibility: 'hidden',
@@ -232,8 +232,8 @@ var personModal = {
 };
 
 // Open a modal by click
-$(document).on('click', '.js-team-modal-open', function () {
+$(document).on('click', '.js-cmssite-modal-open', function () {
   personModal.open($(this));
 });
 
-$(document).on('click', '.js-team-modal-close', personModal.close);
+$(document).on('click', '.js-cmssite-modal-close', personModal.close);

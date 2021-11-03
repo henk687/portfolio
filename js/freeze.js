@@ -8,8 +8,8 @@ var freezeFunctions = {
         this.lastTopPosition = h.scrollTop() ? h.scrollTop() : $('body').scrollTop();
   
         // Pause scrollTriggers in Team section
-        $.each(teamSectionScrollTriggers, function () {
-          ScrollTrigger.saveStyles(teamSectionCardsWrappers);
+        $.each(cmssiteSectionScrollTriggers, function () {
+          ScrollTrigger.saveStyles(cmssiteSectionCardsWrappers);
           this.disable();
         });
   
@@ -38,7 +38,7 @@ var freezeFunctions = {
   
         // Unpause scrollTriggers in Team section
         setTimeout(function () {
-          $.each(teamSectionScrollTriggers, function () {
+          $.each(cmssiteSectionScrollTriggers, function () {
             this.enable();
             setTimeout(() => {
               this.refresh();

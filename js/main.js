@@ -30,51 +30,51 @@ gsap.to('.after-intro-image img', {
 });
 
 //TEAM
-const images = gsap.utils.toArray(".team-galleries-wrapper img");
-let teamSectionScrollTriggers = [];
-const teamSection = $('.team-galleries-wrapper');
-const teamSectionGalleries = teamSection.find('.team-galleries');
-const teamSectionPeopleAmount = teamSection.find('.person-card').length;
-const teamSectionCardsWrappers = teamSection.find('.team-gallery__wrapper');
+const images = gsap.utils.toArray(".cmssite-galleries-wrapper img");
+let cmssiteSectionScrollTriggers = [];
+const cmssiteSection = $('.cmssite-galleries-wrapper');
+const cmssiteSectionGalleries = cmssiteSection.find('.cmssite-galleries');
+const cmssiteSectionPeopleAmount = cmssiteSection.find('.person-card').length;
+const cmssiteSectionCardsWrappers = cmssiteSection.find('.cmssite-gallery__wrapper');
 
-function teamSectionCreateScrollFunctions () {
-	const teamSectionLengthK = $(window).width() >= 768 ? 0.15 : 0.2; // Desktop value : mobile value
+function cmssiteSectionCreateScrollFunctions () {
+	const cmssiteSectionLengthK = $(window).width() >= 768 ? 0.15 : 0.2; // Desktop value : mobile value
 	var headerSize = $(window).width() >= 768 ? 106 : 75; // Desktop value : mobile value
-	teamSection.height(`${teamSectionGalleries.outerHeight() / $(window).outerWidth() * 100 * (1 + teamSectionPeopleAmount * teamSectionLengthK)}vw`)
+	cmssiteSection.height(`${cmssiteSectionGalleries.outerHeight() / $(window).outerWidth() * 100 * (1 + cmssiteSectionPeopleAmount * cmssiteSectionLengthK)}vw`)
 
-	$.each(teamSectionScrollTriggers, function () {
+	$.each(cmssiteSectionScrollTriggers, function () {
 		this.kill();
 	});
 
-	teamSectionScrollTriggers = [];
+	cmssiteSectionScrollTriggers = [];
 
-	teamSectionScrollTriggers.push(ScrollTrigger.create({
-		trigger: teamSection[0],
-		start: `top+=${teamSectionGalleries.outerHeight() / 2}px center+=${headerSize / 2}px`,
-		end: `bottom-=${teamSectionGalleries.outerHeight() / 2}px center+=${headerSize / 2}px`,
+	cmssiteSectionScrollTriggers.push(ScrollTrigger.create({
+		trigger: cmssiteSection[0],
+		start: `top+=${cmssiteSectionGalleries.outerHeight() / 2}px center+=${headerSize / 2}px`,
+		end: `bottom-=${cmssiteSectionGalleries.outerHeight() / 2}px center+=${headerSize / 2}px`,
 		scrub: true,
-		pin: teamSectionGalleries[0],
+		pin: cmssiteSectionGalleries[0],
 	}))
 
-	teamSectionCardsWrappers.each(function (index) {
-		const teamCurrentWrapper = $(this);
+	cmssiteSectionCardsWrappers.each(function (index) {
+		const cmssiteCurrentWrapper = $(this);
 		const [x, xEnd] = (index) % 2 ? ["50%", 0] : ["-50%", 0];
 
-		teamSectionScrollTriggers.push(ScrollTrigger.create({
-			trigger: teamSection[0],
+		cmssiteSectionScrollTriggers.push(ScrollTrigger.create({
+			trigger: cmssiteSection[0],
 			start: "top bottom",
 			end: `bottom top+=${headerSize}px`,
 			scrub: 0.1,
-			animation: gsap.fromTo(teamCurrentWrapper[0], { x: x }, { x: xEnd, ease: "none" }),
+			animation: gsap.fromTo(cmssiteCurrentWrapper[0], { x: x }, { x: xEnd, ease: "none" }),
 		}))
 	})
 }
 
 const showDemo = () => {
-	teamSectionCreateScrollFunctions();
+	cmssiteSectionCreateScrollFunctions();
 
 	$(window).resize(debounce(function () {
-		teamSectionCreateScrollFunctions();
+		cmssiteSectionCreateScrollFunctions();
 	}, 100, false));
 
 	triggerResize();
