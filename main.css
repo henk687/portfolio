@@ -2285,7 +2285,7 @@ h4 {
 }
 
 .cmssite-modal__top-content h3 {
-  font-size: 5.83333vw;
+  font-size: 4.83333vw;
   line-height: 1.025;
 }
 
@@ -2397,7 +2397,7 @@ h4 {
   position: fixed;
   top: 4.79167vw;
   right: 4.375vw;
-  width: 1.31944vw;
+  width: 2.31944vw;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2445,6 +2445,18 @@ h4 {
   pointer-events: none;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}
+
+.cmssite-modal__image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(248, 247, 216, 0.7);
 }
 
 @media only screen and (max-width: 767px) {

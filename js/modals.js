@@ -1,8 +1,4 @@
-/*
-#########################################################################
-Scroll control functions
-#########################################################################
- */
+// Scroll control functions
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -51,11 +47,8 @@ function enableScroll() {
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
-/*
-#########################################################################
-Popup custom logic
-#########################################################################
- */
+// Popup custom logic
+
 var modalElement = $(document).find('.js-cmssite-modal'),
   modalContentTop = modalElement.find('.js-cmssite-modal-content-top'),
   modalContentBottom = modalElement.find('.js-cmssite-modal-content-bottom'),
@@ -97,7 +90,7 @@ var personModal = {
       // Save the selected card to variable
       currentCard = cardSelector;
 
-      // Let's remember the position we will scroll window back after closing popup
+      // Remember the position we will scroll window back after closing popup
       initialImagePositionToViewport = $(window).scrollTop();
 
       // Active states
