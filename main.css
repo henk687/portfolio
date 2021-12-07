@@ -39,6 +39,7 @@ strong {
 html,
 body {
   background-color: #0d0f13;
+  overflow-x: hidden;
 }
 
 body {
