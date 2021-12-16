@@ -1947,31 +1947,31 @@ h4 {
 /* --------------------------
      TEAM
  -------------------------- */
-.person-card {
+.websites-card {
   cursor: pointer;
   position: relative;
 }
 
 @media only screen and (min-width: 768px) {
-  .person-card:not(.is-active):hover::before {
+  .websites-card:not(.is-active):hover::before {
     opacity: 1;
   }
 }
 
-.person-card__image {
+.websites-card__image {
   padding-bottom: 124.05503%;
   overflow: hidden;
   position: relative;
 }
 
 @media only screen and (min-width: 768px) and (min-aspect-ratio: 1450 / 980) {
-  .person-card__image {
+  .websites-card__image {
     padding-bottom: 0;
     height: calc(50vh - 53px - 1.18vw * 3);
   }
 }
 
-.person-card__image img {
+.websites-card__image img {
   position: absolute;
   left: 0;
   top: 0;
@@ -1984,7 +1984,7 @@ h4 {
   object-fit: cover;
 }
 
-.person-card__content {
+.websites-card__content {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2021,28 +2021,28 @@ h4 {
 }
 
 @media only screen and (max-width: 767px) {
-  .person-card__content {
+  .websites-card__content {
     display: none;
   }
 }
 
-.person-card:not(.is-active):hover .person-card__content {
+.websites-card:not(.is-active):hover .websites-card__content {
   opacity: 1;
 }
 
-.person-card__content h3 {
+.websites-card__content h3 {
   margin: 0;
   font-size: 1.66667vw;
   line-height: 1.025;
 }
 
-.person-card__content p {
+.websites-card__content p {
   margin: 0.625vw 0 0 0;
   font-size: 0.97222vw;
   line-height: 1.025;
 }
 
-.person-card__modal-content-wrapper {
+.websites-card__modal-content-wrapper {
   display: none;
 }
 
@@ -2080,7 +2080,7 @@ h4 {
   align-items: center;
 }
 
-.website-gallery .person-card {
+.website-gallery .websites-card {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 25.83333vw;
@@ -2088,14 +2088,14 @@ h4 {
 }
 
 @media only screen and (max-width: 767px) {
-  .website-gallery .person-card {
+  .website-gallery .websites-card {
     width: 80.95652vw !important;
     margin: 2.41546vw;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .website-gallery .person-card {
+  .website-gallery .websites-card {
     width: 40.95652vw;
     margin: 2.41546vw;
   }
@@ -2139,7 +2139,7 @@ h4 {
   justify-content: flex-end;
 }
 
-.cmssite-gallery .person-card {
+.cmssite-gallery .websites-card {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 20.83333vw;
@@ -2147,7 +2147,7 @@ h4 {
 }
 
 @media only screen and (max-width: 767px) {
-  .cmssite-gallery .person-card {
+  .cmssite-gallery .websites-card {
     width: 36.95652vw;
     margin: 2.41546vw;
   }
