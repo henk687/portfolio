@@ -2435,7 +2435,7 @@ h4 {
 }
 
 .cmssite-modal__image {
-  position: fixed;
+  position: relative;
   right: 0;
   top: 0;
   bottom: 0;
@@ -2457,7 +2457,7 @@ h4 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(248, 247, 216, 0.7);
+  background: rgba(248, 247, 216, 1);
 }
 
 @media only screen and (max-width: 767px) {
