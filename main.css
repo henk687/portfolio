@@ -2432,6 +2432,7 @@ h4 {
 .cmssite-modal__close img {
   display: block;
   width: 100%;
+  background: #fff;
 }
 
 .cmssite-modal__image {
@@ -2457,7 +2458,7 @@ h4 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(248, 247, 216, 1);
+  background: rgba(248, 247, 216, 0.7);
 }
 
 @media only screen and (max-width: 767px) {
