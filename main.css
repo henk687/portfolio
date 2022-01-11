@@ -2319,7 +2319,7 @@ h4 {
 .cmssite-modal.is-active .cmssite-modal__bottom-content {
   -webkit-transition-delay: 1.1s;
   transition-delay: 1.1s;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .cmssite-modal:not(.is-active) .cmssite-modal__bottom-content {
@@ -2433,7 +2433,7 @@ h4 {
 .cmssite-modal__close img {
   display: block;
   width: 100%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .cmssite-modal__image {
