@@ -2435,7 +2435,7 @@ h4 {
 }
 
 .cmssite-modal__image {
-  position: relative;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
