@@ -87,6 +87,7 @@ h6 {
 h1,
 h2 {
   font-size: 4.66667vw;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 767px) {
